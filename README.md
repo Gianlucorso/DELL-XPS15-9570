@@ -10,7 +10,7 @@ properly configure a DELL laptop, in particular model XPS15 (9570).
 
 The content in this repository is not completely developed, invented or created by me;
 the goal of this repository is to provide a copy of what I found looking on the 
-Internet in a more self-contained a simpler way.
+Internet in a more self-contained and simpler way.
 It is a collection of useful tools and instructions that I found.
 
 Therefore the user of this material is responsible for any risk deriving in using it which 
