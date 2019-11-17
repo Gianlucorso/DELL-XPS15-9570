@@ -1,8 +1,8 @@
 # DELL-XPS15-9570
 
 ## Author
-Author: Gianluca Corsini
-Email: corsini.gianluca@gmail.com
+* **Author:** Gianluca Corsini
+* **Email:** corsini.gianluca@gmail.com
 
 ## Introduction
 This repository contains all the necessary files (software, guides and so on) to 
