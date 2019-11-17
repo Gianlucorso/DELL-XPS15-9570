@@ -1,13 +1,10 @@
 # Ubuntu 18.04 on DELL XPS 15 (9570)
 > My model is the 4k touchscreen one.
 
-I got the starting instructions from
-< https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560) >
-which was found on
-< https://www.reddit.com/r/Dell/comments/8f9sme/ubuntu_1804_on_xps_9560/ >]
+I got the starting instructions from https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560)
+which was found on https://www.reddit.com/r/Dell/comments/8f9sme/ubuntu_1804_on_xps_9560/ .
 
-These steps are taken from
-< https://medium.com/@peterpang_84917/personal-experience-of-installing-ubuntu-18-04-lts-on-xps-15-9570-3e53b6cfeefe >
+These steps are taken from https://medium.com/@peterpang_84917/personal-experience-of-installing-ubuntu-18-04-lts-on-xps-15-9570-3e53b6cfeefe .
 
 ## 1. Preparation steps on Windows
 
@@ -16,7 +13,7 @@ restore your PC at factory status.
 
 * Boot on Windows and check that the latest version of SupportAssist is installed
   (you may need to register your product at DELL. I totally suggest to do that)
-  Downloadable at < https://www.dell.com/support/contents/us/en/19/article/product-support/self-support-knowledgebase/software-and-downloads/supportassist >
+  Downloadable at https://www.dell.com/support/contents/us/en/19/article/product-support/self-support-knowledgebase/software-and-downloads/supportassist
   
 * Search in the search-bar "My Dell" and launch it. 
   Once opened, click on Support (square on bottom right side of the screen) and
@@ -33,7 +30,7 @@ restore your PC at factory status.
   Enter your registering number of your device (You can find such number in 
   "My Dell" application.
   
-  < https://www.dell.com/support/home/it/it/itbsdt1/Drivers/OSISO/WT64A >
+  https://www.dell.com/support/home/it/it/itbsdt1/Drivers/OSISO/WT64A
   
   So follow the procedure to create it (at least a 16GB pendrive is required).
 
@@ -74,17 +71,17 @@ We are now ready for the installation of Ubuntu.
 * Reboot.
 * Press F12 when you see the Dell logo.
 * Select the one with the words “Boot from UEFI” in it.
-[ You have to BOOT from the pendrive ]
+> [ You have to BOOT from the pendrive ]
 * Hover over the option “Try Ubuntu without installing”.
 
-**TIP:** "Hover" means just select with cursor an option in the list and do nothing 
+**TIP:** `Hover` means just select with cursor an option in the list and do nothing 
      else.
      
 * Press e.
 * Add nomodeset after the words quiet splash. Detailed instructions can be found in here.
 
-In my case it was "[..somestuff..] quiet splash ---" and I changed it in 
-"[..somestuff..] quiet splash nomodeset ---"
+In my case it was `[..somestuff..] quiet splash ---` and I changed it in 
+`[..somestuff..] quiet splash nomodeset ---`
 
 * Press F10.
 
@@ -96,28 +93,28 @@ In my case it was "[..somestuff..] quiet splash ---" and I changed it in
     * install updates during installation
     * install third-parties softwares for graphic and wifi
     * turn off secure boot and insert a password    
-  * Select “Something else”  and click
-     “continue".
+  * Select `Something else`  and click
+     `continue`.
   * Select free space (~ 200 GB, if you followed precisely the steps, otherwise 
      it should be almost equal to the shrinked amount of space you have decided)
-  * Click on "+" button
-  * Leave the default size and select as "Mount point" option "/" and then 
-     click "Ok" button.
-  * Select the new ext4 partition that before was called "free space" and click 
-     on "Install Now" button.
-  * A window should appear asking for swap partition, click on "continue" button.
+  * Click on `+` button
+  * Leave the default size and select as `Mount point` option `/` and then 
+     click `Ok` button.
+  * Select the new ext4 partition that before was called `free space` and click 
+     on `Install Now` button.
+  * A window should appear asking for swap partition, click on `continue` button.
   * Another window should appear asking for writing changes to disk, click on 
-     "continue" button.
-  * Select the place in which you are click on "continue" button.
+     `continue` button.
+  * Select the place in which you are click on `continue` button.
   * Select the layout of your keyboard (you can use also autodetect tool).
   * Write your name, choose username and password, but DO NOT enable option 
-     "Encrypt my home folder" (I personally experienced troubles when installed 
+     `Encrypt my home folder` (I personally experienced troubles when installed 
      Ubuntu with that option enabled, not on Dell Xps 15 9570, but on an old asus 
      K55vm, so this means that on Dell xps 15 9570 it may work, but I did not try).
-  * Click on "continue" button.
+  * Click on `continue` button.
   * Installation process should start.
   * When completed a window should appear asking for restarting the system,
-     click on "Restart Now" button
+     click on `Restart Now` button
   * A message should appear to remove the USB stick and press Enter.
      If the computer blocks at this point just force the shutdown by holding the
      power button until the monitor shut down. If so, turn on again the PC.
@@ -134,16 +131,16 @@ After the installation and reboot, you will be greeted by a blue screen
 * Enter your the n-th word in your passwords as it specified.
 * Select “Yes” for “Disable Secure Boot”.
  
-Thus it is telling you to wait until blue screen with message "Perform MOK 
-management", but it does not specify you that you have some time to do press any 
+Thus it is telling you to wait until blue screen with message `Perform MOK 
+management`, but it does not specify you that you have some time to do press any 
 key. If you, like me, hesitate you should see the windows disappear and the 
 Ubuntu launch menu appear. In this case DO not panic, select from that menu 
-"system setup". The computer should reboot and BIOS menu should be opened. Here 
-go in Secure Boot and then Secure Boot Enable. There uncheck "Secure Boot Enable" 
-option. A warning message should appear, just click on "Yes" button. Then click 
-on "Apply" button and in the next windows that appears, check "Save as Custom 
-User Settings" and then press "Ok" button.
-Now just click on "Exit" button and the PC should reboot. 
+`ystem setup`. The computer should reboot and BIOS menu should be opened. Here 
+go in Secure Boot and then Secure Boot Enable. There uncheck `Secure Boot Enable` 
+option. A warning message should appear, just click on `Yes` button. Then click 
+on `Apply` button and in the next windows that appears, check `Save as Custom 
+User Settings` and then press `Ok` button.
+Now just click on `Exit` button and the PC should reboot. 
 
 ### 5.2 Ubuntu launch menù
 
