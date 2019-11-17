@@ -15,7 +15,7 @@ restore your PC at factory status.
   (you may need to register your product at DELL. I totally suggest to do that)
   Downloadable at https://www.dell.com/support/contents/us/en/19/article/product-support/self-support-knowledgebase/software-and-downloads/supportassist
   
-* Search in the search-bar "My Dell" and launch it. 
+* Search in the search-bar `My Dell` and launch it. 
   Once opened, click on Support (square on bottom right side of the screen) and
   run all scanning services.
   
@@ -28,7 +28,7 @@ restore your PC at factory status.
   settings if things go wrong. 
   You can find a guide in the following link.
   Enter your registering number of your device (You can find such number in 
-  "My Dell" application.
+  `My Dell` application.
   
   https://www.dell.com/support/home/it/it/itbsdt1/Drivers/OSISO/WT64A
   
@@ -42,24 +42,24 @@ restore your PC at factory status.
 In order to install Ubuntu, you need to set the storage drive to AHCI mode.
 
 * Run Command Prompt as an admin.
-* Run: bcdedit /set {current} safeboot minimal .
+* Run: `bcdedit /set {current} safeboot minimal` .
 * Reboot.
 * Press F2 when you see the Dell logo.
-* Select AHCI mode in the SATA option under System Configuration.
-* Press “Apply” then “Exit”.
+* Select `AHCI mode` in the `SATA` option under `System Configuration`.
+* Press `Apply` then `Exit`.
 * Login as usual.
-* Open the Command Prompt as an admin again and type: bcdedit /deletevalue {current} safeboot .
+* Open the Command Prompt as an admin again and type: `bcdedit /deletevalue {current} safeboot` .
 * Reboot.
 
 ## 3. Partition storage drive
 
 Open the start menu.
 
-* Type disk management and open Disk Management.
+* Type disk management and open `Disk Management`.
 * Select the Windows partition (most likely to be the largest one).
-* Right click on it and select “Shrink Volume”.
+* Right click on it and select `Shrink Volume`.
 * Shrink to desired amount. (I shrank 200GB for Ubuntu)
-* See if a partition of “Unallocated space” is shown.
+* See if a partition of `Unallocated space` is shown.
 
 ## 4. Install Ubuntu
 
@@ -69,30 +69,30 @@ We are now ready for the installation of Ubuntu.
 
 * Insert the Ubuntu USB into the computer.
 * Reboot.
-* Press F12 when you see the Dell logo.
-* Select the one with the words “Boot from UEFI” in it.
+* Press `F12` when you see the Dell logo.
+* Select the one with the words `Boot from UEFI` in it.
 > [ You have to BOOT from the pendrive ]
-* Hover over the option “Try Ubuntu without installing”.
+* Hover over the option `Try Ubuntu without installing`.
 
 **TIP:** `Hover` means just select with cursor an option in the list and do nothing 
      else.
      
-* Press e.
-* Add nomodeset after the words quiet splash. Detailed instructions can be found in here.
+* Press `e`.
+* Add `nomodeset` after the words `quiet splash`. Detailed instructions can be found in here.
 
 In my case it was `[..somestuff..] quiet splash ---` and I changed it in 
 `[..somestuff..] quiet splash nomodeset ---`
 
-* Press F10.
+* Press `F10`.
 
 ### 4.2 Live USB Ubuntu
 
 * Launch the Ubuntu installer on the desktop.
-* Select “Enable Insecure Boot mode” during the installation and remember the password for it.
+* Select `Enable Insecure Boot mode` during the installation and remember the password for it.
   * Enable: 
-    * install updates during installation
-    * install third-parties softwares for graphic and wifi
-    * turn off secure boot and insert a password    
+    * `install updates during installation`
+    * `install third-parties softwares for graphic and wifi`
+    * `turn off secure boot and insert a password`
   * Select `Something else`  and click
      `continue`.
   * Select free space (~ 200 GB, if you followed precisely the steps, otherwise 
@@ -100,7 +100,7 @@ In my case it was `[..somestuff..] quiet splash ---` and I changed it in
   * Click on `+` button
   * Leave the default size and select as `Mount point` option `/` and then 
      click `Ok` button.
-  * Select the new ext4 partition that before was called `free space` and click 
+  * Select the new `ext4` partition that before was called `free space` and click 
      on `Install Now` button.
   * A window should appear asking for swap partition, click on `continue` button.
   * Another window should appear asking for writing changes to disk, click on 
@@ -115,7 +115,7 @@ In my case it was `[..somestuff..] quiet splash ---` and I changed it in
   * Installation process should start.
   * When completed a window should appear asking for restarting the system,
      click on `Restart Now` button
-  * A message should appear to remove the USB stick and press Enter.
+  * A message should appear to remove the USB stick and press `Enter`.
      If the computer blocks at this point just force the shutdown by holding the
      power button until the monitor shut down. If so, turn on again the PC.
 
@@ -125,18 +125,18 @@ In my case it was `[..somestuff..] quiet splash ---` and I changed it in
 
 Now the Ubuntu is installed. There are still things to do. 
 After the installation and reboot, you will be greeted by a blue screen 
-“Perform MOK management”.
+`Perform MOK management`.
 
-* Select “Change Secure Boot State”
+* Select `Change Secure Boot State`
 * Enter your the n-th word in your passwords as it specified.
-* Select “Yes” for “Disable Secure Boot”.
+* Select `Yes` for `Disable Secure Boot`.
  
 Thus it is telling you to wait until blue screen with message `Perform MOK 
 management`, but it does not specify you that you have some time to do press any 
 key. If you, like me, hesitate you should see the windows disappear and the 
 Ubuntu launch menu appear. In this case DO not panic, select from that menu 
-`ystem setup`. The computer should reboot and BIOS menu should be opened. Here 
-go in Secure Boot and then Secure Boot Enable. There uncheck `Secure Boot Enable` 
+`system setup`. The computer should reboot and BIOS menu should be opened. Here 
+go in `Secure Boot` and then `Secure Boot Enable`. There uncheck `Secure Boot Enable` 
 option. A warning message should appear, just click on `Yes` button. Then click 
 on `Apply` button and in the next windows that appears, check `Save as Custom 
 User Settings` and then press `Ok` button.
@@ -146,24 +146,24 @@ Now just click on `Exit` button and the PC should reboot.
 
 After that, the computer will reboot and you will be greeted by a screen with booting options.
 
-* Hover over the option “Ubuntu”
-* Press e.
-* Add nouveau.modeset=0 after the words quiet splash. Detailed instructions can be found here, except the phase is changed from nomodeset to nouveau.modeset=0.
+* Hover over the option `Ubuntu`
+* Press `e`.
+* Add `nouveau.modeset=0` after the words `quiet splash`. Detailed instructions can be found here, except the phase is changed from `nomodeset` to `nouveau.modeset=0`.
 
-  In my case I add them between "quiet splash" and "vt_handoff", keeping a white 
+  In my case I add them between `quiet splash` and `vt_handoff`, keeping a white 
   space between them.
-  If you are italian like me and you are struggling to find [=] character, since
-  the keyboard in that windows is setted in us, for an italian keyboard [=] is 
-  in the key [ì] (the one after on the right key [']). Just press it and you will
+  If you are italian like me and you are struggling to find `=` character, since
+  the keyboard in that windows is setted in US layout, for an italian keyboard `=` is 
+  in the key `ì` (the one after on the right key `'`). Just press it and you will
   be fine.
 
-* Press F10.
+* Press `F10`.
 
 All the troublesome boot-options edits allow the computer to boot into Ubuntu or Ubuntu bootable USB.
-If you want to boot into Ubuntu, you can add either nomodeset or nouveau.modeset=0 in the boot option. However you cannot adjust the screen brightness if you use the former one. And remember, only nomodeset works for installing Ubuntu. Using nouveau.modeset=0 for the installation boot will fail.
+If you want to boot into Ubuntu, you can add either `nomodeset` or `nouveau.modeset=0` in the boot option. However you cannot adjust the screen brightness if you use the former one. And remember, only `nomodeset` works for installing Ubuntu. Using `nouveau.modeset=0` for the installation boot will fail.
 [This is may be ignored because when I decided to reinstall Ubuntu, passing from 
- 16 to 18 thorugh a new clean&fresh installation, more true, because I wrongly 
- forgot to do that and the bightness could be changed using fn keys. Anyway after
+ 16 to 18 thorugh a new clean-and-fresh installation, because I wrongly 
+ forgot to do that and the bightness could be changed using `fn` keys. Anyway after
  noticing that I add those lines at the launch menù of Ubuntu. So I invite you
  to do that.]
 
@@ -173,12 +173,12 @@ Now the computer will boot into Ubuntu. There is still one step for Ubuntu to bo
 
 * Open the terminal.
 * Type `$ sudo gedit /etc/default/grub` .
-* Change the line GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" to GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nouveau.modeset=0" .
-* Press “Save” and close the window.
+* Change the line `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"` to `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nouveau.modeset=0"` .
+* Press `Save` and close the window.
 * In the terminal, type `$ sudo update-grub2` .
 * **(OPTIONAL)** Install updates that the system suggested before rebooting. 
 * Reboot.
-* Select Ubuntu.
+* Select `Ubuntu`.
 
 ### 5.4 Status
 
@@ -205,11 +205,11 @@ and I reported my result using that command in terminal:
 
 #### 5.4.1 Tweaks_xps script**
 
-* Start by cloning the following repository I cloned it in Downloads
+* Start by cloning the following repository I cloned it in `Downloads`:
 
 ```$ git clone https://github.com/JackHack96/dell-xps-9570-ubuntu-respin.git```
 
-* Then
+* Then:
 
 ```
 $ cd /[...path_to_cloned_repo]/dell-xps-9570-ubuntu-respin
@@ -218,13 +218,13 @@ $ sudo ./xps-tweaks.sh
 ```
 
 > **TIPS:**
-> * When it asks you about proceeding or not in installing something (yes/no questions) type "1" for yes, 2 for "no".
-> * When a License agreement appears use keys to read it and to move the cursor on <ok> then press Enter 
-> * When running that script I accepted everything except for Meltdown/Spectre path disabling part
+> * When it asks you about proceeding or not in installing something (yes/no questions) type `1` for yes, `2` for no.
+> * When a License agreement appears use keys to read it and to move the cursor on `<ok>` then press `Enter` 
+> * When running that script I accepted everything except for Meltdown/Spectre path disabling part.
 
-* Reboot now
+* Reboot now.
 
-* when I tried to type
+* when I tried to type:
 
 ```
 $ sudo prime-select nvidia
@@ -270,15 +270,16 @@ https://gloveboxes.github.io/Ubuntu-for-Azure-Developers/docs/dellxps15.html
 
 #### 5.4.4 Fix NVIDIA driver installation**
 
-After having run the Tweaks_xps script, NVIDIA drivers may not work.
+After having run the `Tweaks_xps script`, NVIDIA drivers may not work.
 
 I tried different method but they did not work. I gave up until once I searched 
 and tried again.
 
-The following method worked!!
+**Update:** The following method worked!!
 
 [ Source : https://www.mvps.net/docs/install-nvidia-drivers-ubuntu-18-04-lts-bionic-beaver-linux/ ]
 
+**NB**
 "Before we start installing the correct driver, we need to clean the system of 
 any previously installed driver that might create software issues.
 You can do that by using the following command:"
@@ -302,19 +303,21 @@ in a terminal this command:
 ```$ uname -a```
 
 In my case the output was **18.04.1**
+
+```
 Linux <myusername>-XPS-15-9570 5.0.0-31-generic #33~18.04.1-Ubuntu SMP <day> <month> 1 <hours>:<minutes>:<seconds> <timezone> <year> x86_64 x86_64 x86_64 GNU/Linux
+```
 
-> I used <something> to replace useless info, that you are out of scope from
+> In the previous output `<something>` is used to replace useless info, that you are out of scope from
 this tutorial. 
-
 
 Then I visited this link:
 
 <https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa>
 
-and I pressed CTRL + F to search for "18.04.1" and to check which package version
+and I pressed `CTRL + F` to search for `18.04.1` and to check which package version
 of NVIDIA drivers was compatible with that version of Ubuntu.
-In my case the latest package version that was compatible was "nvidia-graphics-drivers-430".
+In my case the latest package version that was compatible was `nvidia-graphics-drivers-430`.
 
 Therefore I installed it through this command:
 
@@ -330,9 +333,8 @@ Once rebooted, check if evrything went fine with this command:
 
 It should return something like this:
 
-Sun Oct 13 10:32:28 2019 
-
 ```
+Sun Oct 13 10:32:28 2019 
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 430.50       Driver Version: 430.50       CUDA Version: 10.1     |
 |-------------------------------+----------------------+----------------------+
@@ -353,21 +355,21 @@ Sun Oct 13 10:32:28 2019
 +-----------------------------------------------------------------------------+
 ```
 
-Then I suggested to select "intel-profile" to increase battery life when you
+Then I suggested to select `intel-profile` to increase battery life when you
 are not intending to use NVIDIA graphic card. Thus:
 
 ```$ sudo prime-select intel```
 
-or, use ubuntu search menu. Search for "nvidia xserver", open that application.
+or, use ubuntu search menu. Search for `nvidia xserver`, open that application.
 If the installation went fine you should see many options in the list menu on 
-the left. The last one should be "PRIME Profiles". Click on it and on the right
+the left. The last one should be `PRIME Profiles`. Click on it and on the right
 you should be able to select which profile you prefer.
-Select "Intel" when you are not intending to use your NVIDIA graphic card (this 
-will increase the battery life), otherwise "NVIDIA" profile.
+Select `Intel` when you are not intending to use your NVIDIA graphic card (this 
+will increase the battery life), otherwise `NVIDIA` profile.
 
 ## 9. If you want to erase Ubuntu and reinstall it or install another version of it
 
-**Assumptions:** no changes in BIOS (still AHCI option enabled), still the same Ubuntu 
+**Assumptions:** no changes in BIOS (still `AHCI` option enabled), still the same Ubuntu 
 partition you did at that time you installed Ubuntu.
 
 If you are in that situation then skip steps below and jump to next subsection,
@@ -376,7 +378,7 @@ otherwise do these preliminary steps before reinstalling Ubuntu.
 * If you do not have anymore the recovery pendrive prepared in step 1, then 
   do that procedure again.
 
-* Then if you changed anything in the BIOS (AHCI), then redo steps at point 2
+* Then if you changed anything in the BIOS (`AHCI`), then redo steps at point 2
 
 * If you do not have anymore partition with Ubuntu **ignore next subsection** and 
   redo all points starting from point 3.
@@ -385,69 +387,66 @@ otherwise do these preliminary steps before reinstalling Ubuntu.
 
 * Insert the Ubuntu USB into the computer.
 * Reboot.
-* Press F12 when you see the Dell logo.
-* Select the one with the words “Boot from UEFI” in it.
-[ You have to BOOT from the pendrive ]
-* Hover over the option “Try Ubuntu without installing”.
+* Press `F12` when you see the Dell logo.
+* Select the one with the words `Boot from UEFI` in it.
+> You have to BOOT from the pendrive.
+* Hover over the option `Try Ubuntu without installing`.
 
 **TIP:** 
-"Hover" means just select with cursor an option in the list and do nothing else.
+`Hover` means just select with cursor an option in the list and do nothing else.
      
-* Press e.
-* Add nomodeset after the words quiet splash. Detailed instructions can be found in here.
+* Press `e`.
+* Add `nomodeset` after the words `quiet splash`. Detailed instructions can be found in here.
 
-In my case it was "[..somestuff..] quiet splash ---" and I changed it in 
-"[..somestuff..] quiet splash nomodeset ---"
+In my case it was `[..somestuff..] quiet splash ---` and I changed it in 
+`[..somestuff..] quiet splash nomodeset ---`
 
-* Press F10.
+* Press `F10`.
 * Launch the Ubuntu installer on the desktop.
 
 NB: usually at this point here you should (I am citing section 4.2)
 
-Select “Enable Insecure Boot mode” during the installation and remember the password for it.
+Select `Enable Insecure Boot mode` during the installation and remember the password for it.
 
 but this time I did not notice this option, so I continued the installation ignoring
 this. After the steps reported here, usually you should go into the bios and disable 
 secure boot (I am citing section 5.1). 
 Since I did not turned on it, I ignored those steps.
-I checked on the bios after installing Ubuntu and "Secure boot enable" option 
+I checked on the bios after installing Ubuntu and `Secure boot enable` option 
 was unchecked.
 
 * In installation procedure you have to:
   * enable: 
-    * install updates during installation
-    * install third-parties softwares for graphic and wifi   
-  * select "Erase Ubuntu XX.YY.Z and reinstall option
-  * click "continue" button.
+    * `install updates during installation`
+    * `install third-parties softwares for graphic and wifi`   
+  * select `Erase Ubuntu XX.YY.Z` and `reinstall` option
+  * click `continue` button.
   * a warning window will appear asking you to confirm changes to the partition
-     (since I installed Ubuntu on partition #7 on my device labelled as /dev/nvme0n1
+     (since I installed Ubuntu on partition `#7` on my device labelled as `/dev/nvme0n1`
      I can be sure that only the partition with Ubuntu will be erased and not the one
      on which Windows is installed).
-  * If everything seems to be ok click on "continue" button
+  * If everything seems to be ok click on `continue` button
   * proceed in the installation steps
-  * pick username and password then click on "continue" button
+  * pick username and password then click on `continue` button
   * installation procedure will be completed
   * When completed a window should appear asking for restarting the system,
-     click on "Restart Now" button
-  * A message should appear to remove the USB stick and press Enter.
-     Remove the pendrive and wait some seconds, then click Enter.
+     click on `Restart Now` button
+  * A message should appear to remove the USB stick and press `Enter`.
+     Remove the pendrive and wait some seconds, then click `Enter`.
      If the computer blocks at this point just force the shutdown by holding the
      power button until the monitor shut down. If so, turn on again the PC.     
 * At this point you can go back at section 5.2 and redo all steps for setting up
    Ubuntu after installing it.
 
-
 ## How to run Windows?                                                          
 
-Simply select option "Windows Boot Manager (on / ...somestuff)" and press Enter.
+Simply select option `Windows Boot Manager (on / ...somestuff)` and press `Enter`.
 Windows boot should be launched. 
-A blue screen may appear asking for entering the Recovery Key in order to 
+A blue screen may appear asking for entering the `Recovery Key` in order to 
 disable BitLocker for the current drive. Just simply the instrunctions shown
 (something like connect to your microsoft account associated to the Microsoft
 account used to set up your Dell XPS 15, following the link provided and copy
 the key reported in the box).
-
-
 
 ## Other useful resources
 
