@@ -1,8 +1,5 @@
 # Ubuntu 18.04 on DELL XPS 15 (9570)
-
-INSTALL UBUNTU 18.04 ON DELL XPS 15 9570
-
-My model is the 4k touchscreen one.
+> My model is the 4k touchscreen one.
 
 I got the starting instructions from
 < https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560) >
