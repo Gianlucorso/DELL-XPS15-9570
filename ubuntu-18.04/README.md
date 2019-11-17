@@ -66,7 +66,7 @@ Open the start menu.
 
 ## 4. Install Ubuntu
 
-### 4.1
+### 4.1 Preliminary steps
 
 We are now ready for the installation of Ubuntu.
 
@@ -187,37 +187,22 @@ Now the computer will boot into Ubuntu. There is still one step for Ubuntu to bo
 
 ### 5.4 Status
 
-+------------------------------------------------------------------------------+
-|              |        Status         |                                       |
-|     Item     |-----------------------|                 Notes                 |
-|              | Working | NOT Working |                                       |
-+------------------------------------------------------------------------------+
-| Wifi         |    X    |             |                                       |
-+------------------------------------------------------------------------------+
-| Bluetooth    |    X    |             | not visible on my Redmi Note 3 pro,   |
-|              |         |             | I could connect my phone from PC side.|
-+------------------------------------------------------------------------------+
-| Touch-screen |    X    |             | Works perfectly, very smooth and when |
-|              |         |             | you open a window in which you can    |
-|              |         |             | write, a screen keyboard appears.     |
-+------------------------------------------------------------------------------+
-| Speakers     |    X    |             |                                       |
-+------------------------------------------------------------------------------+
-| Webcam       |    X    |             | Tested on Skype.                      |
-+------------------------------------------------------------------------------+
-| Headset      |    X    |             | Tested on Skype (audio + mic).        |
-+------------------------------------------------------------------------------+
-| Suspend mode |    X    |             | Working, but when pc is in suspend    |
-|              |         |             | mode the fans do not turn off.        |
-|              |         |             | **Update: now it works.**             |
-+------------------------------------------------------------------------------|
+|     Item     |  Status |             |                                                                                                                                     Notes                                                                                                                                    |
+|:------------:|:-------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|              | Working | NOT Working |                                                                                                                                                                                                                                                                                    |
+|     Wifi     |    X    |             |  ~~Not visible on my Redmi Note 3 pro, I could connect my phone from PC side.~~ **Update:** I have now a Xiaomi Redmi Note 7 and I can connect both from PC both   from smartphone side. I do not know if it solved thanks to changing the smartphone   or updating some packages. |
+|  Touchscreen |    X    |             |  Works perfectly, very smooth and when you open a window in which you can type, a   screen keyboard appears.                                                                                                                                                                       |
+|   Speakers   |    X    |             |                                                                                                                                                                                                                                                                                    |
+|    Webcam    |    X    |             | Tested on Skype.                                                                                                                                                                                                                                                                   |
+|    Headset   |    X    |             | Tested on Skype (audio + mic).                                                                                                                                                                                                                                                     |
+| Suspend mode |    X    |             | ~~Working, but when pc is in suspend mode the fans do not turn off.~~ **Update: now it works.**                                                                                                                                                                                    |
 
 
 ### 5.4 Fixing and improvements
 
 Here I reported the command to check your kernel version:
 
-`$ uname -a`
+```$ uname -a```
 
 and I reported my result using that command in terminal:
  
@@ -227,7 +212,7 @@ and I reported my result using that command in terminal:
 
 - Start by cloning the following repository I cloned it in Downloads
 
-`$ git clone https://github.com/JackHack96/dell-xps-9570-ubuntu-respin.git`
+```$ git clone https://github.com/JackHack96/dell-xps-9570-ubuntu-respin.git```
 
 - Then
 
@@ -237,21 +222,12 @@ $ cd /[...path_to_cloned_repo]/dell-xps-9570-ubuntu-respin
 $ sudo ./xps-tweaks.sh
 ```
 
-+-------------------
-| **TIPS:**
-|
-| - When it asks you about proceeding or not in installing something (yes/no questions)
-|   type "1" for yes, 2 for "no".
-|
-| - When a License agreement appears use keys to read it and to move the cursor on <ok>
-|   then press Enter 
-|
-| - When running that script I accepted everything except for Meltdown/Spectre path
-|   disabling part
--------------------  
+> **TIPS:**
+> * When it asks you about proceeding or not in installing something (yes/no questions) type "1" for yes, 2 for "no".
+> * When a License agreement appears use keys to read it and to move the cursor on <ok> then press Enter 
+> * When running that script I accepted everything except for Meltdown/Spectre path disabling part
 
 - Reboot now
-
 
 - when I tried to type
 
@@ -285,7 +261,7 @@ The following command is taken from:
 
 https://gloveboxes.github.io/Ubuntu-for-Azure-Developers/docs/dellxps15.html
 
-`$  gsettings set org.gnome.desktop.peripherals.touchpad click-method areas`
+```$  gsettings set org.gnome.desktop.peripherals.touchpad click-method areas```
 
 Now the touchpad right click button should work.
 
@@ -295,7 +271,7 @@ I took this command from:
 
 https://gloveboxes.github.io/Ubuntu-for-Azure-Developers/docs/dellxps15.html
 
-`$ timedatectl set-local-rtc 1 --adjust-system-clock`
+```$ timedatectl set-local-rtc 1 --adjust-system-clock```
 
 #### 5.4.4 Fix NVIDIA driver installation**
 
@@ -312,15 +288,15 @@ The following method worked!!
 any previously installed driver that might create software issues.
 You can do that by using the following command:"
 
-`$ sudo apt-get purge nvidia*`
+```$ sudo apt-get purge nvidia*```
 
 "Add the graphic-driver PPA using the following command:"
 
-`$ sudo add-apt-repository ppa:graphics-drivers`
+```$ sudo add-apt-repository ppa:graphics-drivers```
 
 "To retrieve information about the latest version of the packages listed in the repository we run:"
 
-`$ sudo apt-get update`
+```$ sudo apt-get update```
 
 Then visit the following link to check which package version is compatible with
 your system.
@@ -328,7 +304,7 @@ your system.
 What I did was looking for the exact version of Ubuntu. In order to do this type 
 in a terminal this command:
 
-`$ uname -a`
+```$ uname -a```
 
 In my case the output was **18.04.1**
 Linux <myusername>-XPS-15-9570 5.0.0-31-generic #33~18.04.1-Ubuntu SMP <day> <month> 1 <hours>:<minutes>:<seconds> <timezone> <year> x86_64 x86_64 x86_64 GNU/Linux
@@ -347,19 +323,21 @@ In my case the latest package version that was compatible was "nvidia-graphics-d
 
 Therefore I installed it through this command:
 
-`$ sudo apt-get install nvidia-driver-430`
+```$ sudo apt-get install nvidia-driver-430```
 
 Then reboot your pc.
 
-`$ sudo reboot now`
+```$ sudo reboot now```
 
 Once rebooted, check if evrything went fine with this command:
 
-`$ nvidia-smi`
+```$ nvidia-smi```
 
 It should return something like this:
 
 Sun Oct 13 10:32:28 2019 
+
+```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 430.50       Driver Version: 430.50       CUDA Version: 10.1     |
 |-------------------------------+----------------------+----------------------+
@@ -378,11 +356,12 @@ Sun Oct 13 10:32:28 2019
 |    0      2395      G   /usr/bin/gnome-shell                         383MiB |
 |    0      3380      G   /usr/lib/firefox/firefox                       3MiB |
 +-----------------------------------------------------------------------------+
+```
 
 Then I suggested to select "intel-profile" to increase battery life when you
 are not intending to use NVIDIA graphic card. Thus:
 
-`$ sudo prime-select intel`
+```$ sudo prime-select intel```
 
 or, use ubuntu search menu. Search for "nvidia xserver", open that application.
 If the installation went fine you should see many options in the list menu on 
@@ -479,7 +458,7 @@ the key reported in the box).
 
 ## Other useful resources
 
-https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560)#installation-steps
+* https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560)#installation-steps
 
-https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880
+* https://gist.github.com/tomwwright/f88e2ddb344cf99f299935e1312da880
 
