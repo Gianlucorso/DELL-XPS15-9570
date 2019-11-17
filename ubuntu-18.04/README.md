@@ -71,7 +71,7 @@ We are now ready for the installation of Ubuntu.
 * Reboot.
 * Press `F12` when you see the Dell logo.
 * Select the one with the words `Boot from UEFI` in it.
-> [ You have to BOOT from the pendrive ]
+> You have to BOOT from the pendrive.
 * Hover over the option `Try Ubuntu without installing`.
 
 **TIP:** `Hover` means just select with cursor an option in the list and do nothing 
