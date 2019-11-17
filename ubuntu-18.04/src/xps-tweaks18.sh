@@ -1,3 +1,4 @@
+# Source: http://wiki.lofarolabs.com/index.php/Dell_XPS_15_9570_on_Ubuntu_16.04_LTS_and_18.04_LTS
 #!/usr/bin/env bash
 
 # Check if the script is running under Ubuntu 18.04 Bionic Beaver
